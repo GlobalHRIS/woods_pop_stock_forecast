@@ -1,4 +1,4 @@
-# pip install streamlit fbprophet yfinance plotly
+# pip install streamlit prophet yfinance plotly
 import streamlit as st
 from datetime import date
 
@@ -10,9 +10,9 @@ from plotly import graph_objs as go
 START = "2015-01-01"
 TODAY = date.today().strftime("%Y-%m-%d")
 
-st.title('Stock Forecast App')
+st.title('AI Stock Forecaster App')
 
-stocks = ('GOOG', 'AAPL', 'MSFT', 'GME')
+stocks = ('GOOG', 'AAPL', 'MSFT', 'GME', 'BARC')
 selected_stock = st.selectbox('Select dataset for prediction', stocks)
 
 n_years = st.slider('Years of prediction:', 1, 4)
